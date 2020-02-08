@@ -99,11 +99,11 @@ class SparseWGANGPPix2PixModel(BaseModel):
             for optimizer in self.optimizers:
                 self.schedulers.append(networks.get_scheduler(optimizer, opt))
 
-        print('---------- Networks initialized -------------')
-        networks.print_network(self.netG)
-        if self.isTrain:
-            networks.print_network(self.netD)
-        print('-----------------------------------------------')
+        # print('---------- Networks initialized -------------')
+        # networks.print_network(self.netG)
+        # if self.isTrain:
+        #     networks.print_network(self.netD)
+        # print('-----------------------------------------------')
 
     def get_z_random(self, batch_size, nz, random_type='gauss'):
         if random_type == 'uni':

@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+
+package services;
+
+service ImageTransfer {
+  rpc GetGenerateImage(Image) returns (Images) {}
+  rpc RandomizeNoise(Empty) returns (Empty) {}
+}
+
+message Empty {}
+
+message Image{
+  bytes data = 1;
+  int32 label = 2;
+  int32 shadow = 3;
+}
+
+message Images{
+  bytes img_1 = 1;
+  bytes img_2 = 2;
+}
+

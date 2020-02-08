@@ -1,7 +1,6 @@
 
 def create_model(opt):
     model = None
-    print(opt.model)
     if opt.model == 'pix2pixhd':
         assert(opt.dataset_mode == 'aligned' or opt.dataset_mode=='labeled')
         from .pix2pixhd_model import Pix2PixModel
